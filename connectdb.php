@@ -1,14 +1,11 @@
-<html>
-<body>
- 
-<?php
-$con = mysql_connect("localhost","root","Baza_do_strony","");
+<!-- <?php
+$con = mysql_connect("localhost","baza_do_strony","");
 if (!$con)
   {
   die('Nie mozna polaczyc: ' . mysql_error());
   }
   
-mysql_select_db("baza1", $con);
+mysql_select_db("baza_do_strony", $con);
   
 $sql="INSERT INTO dane (Imie, Nazwisko, Adres)
 VALUES
@@ -21,7 +18,29 @@ if (!mysql_query($sql,$con))
 echo "Dodano wpis!";
   
 mysql_close($con)
+?> -->
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "baza";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO dane (Imie, Nazwisko, Adres)
+VALUES ('John', 'Doe', '')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 ?>
- 
-</body>
-</html>
