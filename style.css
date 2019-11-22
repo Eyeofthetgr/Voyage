@@ -147,7 +147,8 @@ li {
     padding: 15px 20px 15px 20px;
     align-content: center;
 }
-.description p{
+
+.description p {
     position: absolute;
     top: 12%;
     padding-right: 15px;
@@ -281,37 +282,44 @@ li {
     grid-row: 18/20;
     background-color: #d0ebf5;
 }
-.Granada{
+
+.Granada {
     position: absolute;
     top: 13%;
     left: 20%;
 }
-.Bali{
+
+.Bali {
     position: absolute;
     top: 13%;
     left: 50%;
 }
-.Cypr{
+
+.Cypr {
     position: absolute;
     top: 13%;
     left: 75%;
 }
-.CityNameFirst{
+
+.CityNameFirst {
     font-size: 2rem;
     text-align: center;
     padding-left: 20px;
 }
-.CityNameSec{
+
+.CityNameSec {
     font-size: 2rem;
     text-align: center;
     padding-left: 50px;
 }
-.CityNameThird{
+
+.CityNameThird {
     font-size: 2rem;
     text-align: center;
     padding-left: 45px;
 }
-.price{
+
+.price {
     position: absolute;
     box-sizing: content-box;
     width: 100px;
