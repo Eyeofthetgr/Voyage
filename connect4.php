@@ -3,7 +3,7 @@ $Imie = $_POST['Imie'];
 $Nazwisko = $_POST['Nazwisko'];
 $Adres = $_POST['Adres'];
 
-$conn = new mysqli('localhost','root','','test');
+$conn = new mysqli('localhost','root','','formdb');
 if($conn->connect_error){
     die('Connection failed '.$conn->connect_error);
 }else{
@@ -11,7 +11,7 @@ if($conn->connect_error){
         values(?,?,?)");
     $stmt->bind_param("sss",$Imie, $Nazwisko, $Adres);
     $stmt->execute();
-    echo "registration Successfully";
+    echo "Rejestracja przebiegła pomyślnie";
     $stmt->close();
     $conn->close();
 }
